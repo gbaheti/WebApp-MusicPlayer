@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Gaurav Baheti">
+<meta name="description" content="Music player html5 project demo">
+
+<title>Music Player by Gaurav Baheti</title>
+
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/styles.css" />
+<!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+<body>
+		<div id="topline"></div>
+		<header>
+			<h1>Music Player UI</h1>
+		</header>
+        
+        <div class="content">
+
+			<div id="player">
+				<div id="mainbg"></div>
+				<div id="mainsimg"><img src="img/songs/mains1.png" alt=""></div>
+				<div id="songtitle"><p>Call Me A Spaceman</p><span id="subalbum">Hardwell Ft. Mitch Crown</span></div>
+				<div id="defaultprogress">
+					<div id="progressslide"></div>
+				</div>
+				<div id="timer">04:33</div>
+				<div id="controls">
+					<div id="volumes">
+						<div id="volume" class="icon-volume-medium cleft control"></div>
+						<div id="volumecontrol">
+						</div>
+					</div>
+					<div id="loop" class="icon-loop2 cleft control"></div>
+					<div id="conright">
+						<div id="play" class="icon-play cright control"></div>
+						<div id="pause" class="icon-pause cright control"></div>
+						<div id="prev" class="icon-backward cright control"></div>
+						<div id="next" class="icon-forward cright control"></div>
+					</div>
+				</div>
+				<div id="playlist">
+					<ul>
+						<script id="template" type="text/x-handlebars-template">
+
+							{{#each this}}
+							<li id="{{id}}" data-link="{{link}}">
+								<div class="playhover"></div>
+								<div class="smallimg">
+									<img src="{{smallimg}}" alt="">
+								</div>
+								<div class="playsongtitle">
+									<p>{{playsongtitle}}</p>
+									<span class="playsubname">{{playsubname}}</span>
+								</div>
+								<div class="divright">
+									<div class="listdiv"></div>
+									<div class="icon-play2"></div>
+									<div class="playsongtime">{{playsongtime}}</div>
+								</div>
+								<div class="mainscover" style="display: none">{{mainscover}}</div>
+								<div class="mainsimg" style="display: none">{{mainsimg}}</div>
+							</li>
+							{{/each}}
+
+						</script>
+
+					</ul>
+				</div>
+
+				<a href="mailto:gaurav@gbaheti.me?subject=New%20Song%20Please" target="_top">
+					<div id="request">
+						<div class="icon-heart"></div>
+						<p>Request Song</p>
+					</div>
+				</a>
+
+				<div id="eject" class="icon-eject"></div>
+
+			</div>
+
+
+				<div id="playershadow"></div>
+				<div id="vinyl"></div>
+
+        </div>
+        
+        <footer>
+        </footer>
+
+<script src="js/jquery.js"></script>
+<script src="js/jqui.js"></script>
+<script src="js/handlebars.js"></script>
+<script src="js/site.js"></script>
+<script src="js/content.js"></script>
+<script>$(".content").fadeIn();</script>
+</body>
+</html>
